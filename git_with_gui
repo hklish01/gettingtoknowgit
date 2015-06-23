@@ -1,5 +1,5 @@
 <html>
-<title>Getting to Know Git: CLI</title>
+<title>Getting to Know Git: GUI</title>
 
 <head>
 	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -9,21 +9,17 @@
       -->
 	</head>
 	<body>
-		<h1 id="header">Using Git with the Commandline</h1>
+		<h1 id="header">Using Git with a GUI</h1>
 		<div id="main">
 			<ol>
 				<li>Install Git</li>
-				<li>Configure some basic settings</li>
-				<li>Set up a key to authenticate with GitHub</li>
+				<li>Sign into your GitHub Account</li>
 				<li>Practice with Git and GitHub</li>
 			</ol>
-		<h2 id="install">Install Git</h2>
-		<ul>
-			<li><a href="#pc">Install on a Pc</a></li>
-			<li><a href="#mac">Install on a Mac</li>
-			<li><a href="#other">Install on other platforms</a>
-        </ul>
+		<p>
+         <h2 id="install">Install your GUI</h2>
+
 		</div>	
 
 </body>
-</html>		
+</html>	
