@@ -1,0 +1,20 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+body{
+	width: 80%;
+	 margin: auto;
+  font-family: sans-serif;
+
+  #header{
+  	padding: 2em 0 1em 0;
+  }
+ 
+  #main{
+  	line-height: 1.5;
+ 
+  }
+}
