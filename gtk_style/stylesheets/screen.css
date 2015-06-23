@@ -9,15 +9,32 @@ body {
   font-family: sans-serif;
 }
 /* line 12, ../sass/screen.scss */
-body #header {
-  padding: 2em 0 1em 0;
+body #nav {
+  font-size: 10px;
+  color: gray;
+  padding: 1em;
 }
-/* line 16, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
+body #header {
+  padding: 0 0 1em 0;
+}
+/* line 22, ../sass/screen.scss */
 body #main {
   line-height: 1.5;
 }
-/* line 19, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 body #main .note {
   color: gray;
   font-style: italic;
+}
+/* line 29, ../sass/screen.scss */
+body #main .example {
+  border-radius: 1em;
+  font-size: 80%;
+  line-height: 1.6;
+  margin: 2em 0;
+  padding: 2.5em;
+  background: #F0F2F4;
+  overflow: auto;
+  font-family: monospace;
 }

@@ -9,8 +9,14 @@ body{
 	 margin: auto;
   font-family: sans-serif;
 
+  #nav{
+  	font-size: 10px;
+  	color: gray;
+  	padding: 1em;
+  }
+
   #header{
-  	padding: 2em 0 1em 0;
+  	padding: 0 0 1em 0;
   }
  
   #main{
@@ -19,6 +25,16 @@ body{
   	.note{
   		color: gray;
   		font-style: italic;
+  	}
+  	.example{
+  	  border-radius: 1em;
+      font-size: 80%;
+      line-height: 1.6;
+      margin: 2em 0;
+      padding: 2.5em;
+      background: #F0F2F4;
+      overflow: auto;
+      font-family: monospace;
   	}
  
   }
