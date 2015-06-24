@@ -14,18 +14,59 @@
 		<div id="main">
 			<ol>
 				<li>Install Git</li>
-				<li>Configure some basic settings</li>
-				<li><a href="key">Set up a key or creditential to authenticate with GitHub</a></li>
-				<li><a href="practice">Practice with Git and GitHub</a></li>
+				<li><a href="#key">Set up a key or creditential to authenticate with GitHub</a></li>
+				<li><a href="#practice">Practice with Git and GitHub</a></li>
 			</ol>
+
 		<h2 id="install">Install Git</h2>
 		<ul>
-			<li><a href="#pc">Install on a Pc</a></li>
+			<li><a href="#pc">Install on Windows</a></li>
 			<li><a href="#mac">Install on a Mac</li>
 			<li><a href="#other">Install on other platforms</a>
         </ul>
-        <h3 id="pc">Install Git on a PC</h3>
-        <p>You'll use gitbash</p>
+        <h3 id="pc">Install Git on Windows</h3>
+        <p class="note">Please note:  You may need administrator's rights to install the Git software.  If you do not have Administrator's rights, please contact your computer support team.</p>
+
+<ol>
+<li>Navigate to <a href="http://git-scm.com/">http://git-scm.com/</a></li>
+<li>The webpage will auto-detect what operating system you are using on your machine and provide you with the download for that OS.  Look for the computer screen on the right-hand side of the page.  Click on Downloads for Windows.  Your computer should automatically launch an explorer window and ask you where to save the program on your computer.</li>
+
+<li>On your computer, navigate to where you want to save the Git program .exe file and double-click on the file.  This should launch the installer.<br/>
+You may receive a security warning about the software being from an unknown publisher.  You can safely ignore this message. Click the Run button to continue or cancel to exit out of the installation.</span></li>
+
+
+<li>The Welcome to the Git Setup Window window will appear.  Begin installation by clicking Next.</li>
+ 
+
+<li>Click Next to accept the terms of the license.</li>
+<li>Next, choose where Git will be installed.  Click Next to choose the default location provided unless you know you need to install the software somewhere else on your machine.</li>
+<li>Next, select the components you want installed along with the Git software.  There are already some default options checked.  Other options that you might want to check include:
+<ul>
+<li>Windows Explorer integration, including Git Bash Here and Git GUI Here.  This component will allow you to use the Windows Explorer context menu to access git Bash and Git Gui.</li>
+<li>All other components are optional.</li>
+</ul>
+</li>
+
+ 
+
+<li>Next, Select your Start menu Folder.  Choose Next to use the default.</li>
+<li>Next you need to choose how you would like to use Git from the command line.  Choose the second option "Run git from the Windows Command Prompt".  This will allow you to use Git Bash and the Standard Windows prompt.  Do not choose the third option as choosing this option may change settings on your machine that may affect other installed programs.</li>
+<li>	Next, you'll need to choose an option for how Git should treat line endings in text files.  If you're planning on sharing your project with others who may be using a different operating system, choose Checkout Windows-style, commit Unix-style line endings</li>.
+ 
+
+<li>Choose Next to start the installation.</li>
+<li>Click Finish to exit the installer.</li>
+</ol>
+
+<h3>You can access Git bash or the Git GUI in a couple of ways:</h3>
+<ol>
+<li>Open the Start menu, you'll find a new Git folder with both Git gui and Git Bash icon
+<li>Using the Windows Explorer context menu
+<ul>
+<li>Navigate to a folder on your machine</li>
+<li>Right click inside the folder.  Youíll notice two new options in your context menu: Git Bash and Git Gui</li>
+</ul>
+</ol>
 
         <h3 id="mac">Install Git on a Mac</h3>
         <p>There's a chance git is already installed on your Mac! Open up a terminal window and run "git". If you get a long list of commands, you're probably ready to go. If the terminal says something about not knowing what you're talking about, you'll have to install it:</p>
@@ -54,7 +95,9 @@
         	<div class="example">
 			  clip < ~/.ssh/id_rsa.pub
 			</div> 
+
            <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
+           <h3>Paste your key into your GitHub settings</h3>
            <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
           
 
