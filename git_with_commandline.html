@@ -64,7 +64,7 @@ You may receive a security warning about the software being from an unknown publ
 <li>Using the Windows Explorer context menu
 <ul>
 <li>Navigate to a folder on your machine</li>
-<li>Right click inside the folder.  Youíll notice two new options in your context menu: Git Bash and Git Gui</li>
+<li>Right click inside the folder.  You'll notice two new options in your context menu: Git Bash and Git Gui</li>
 </ul>
 </ol>
 
@@ -87,13 +87,13 @@ You may receive a security warning about the software being from an unknown publ
     <p>So you're not using Windows or Mac? We're impressed! Try <a href="https://git-scm.com/download/">git-scm/downloads</a> for your OS and follow instructions from there.</p>    
 
         <h2 id="key">Set up an SSH key to authenticate with GitHub</h3>
-        <p>If you run the following command, it will create a key on your computer <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the copying step</span></p>
+        <p>If you run the following command, it will create a key on your computer. <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the <a href="#copy">copying step</a></span>.</p>
         	<div class="example">
         		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
         	</div>
         	<p>Click enter to accept the defaults. If you choose to use a passphrase, keep it short! You should see a statement about your public information and key being saved.</p>
         	<p>The next step is to copy this information so you can paste it into your GitHub account settings. Because of the nature of the key, you'll probably want to use a special command to copy the key (as opposed to opening up the document in a text editor and copying it from there).
-        		<h4>Copying on a Mac</h4>
+        		<h4 id="copy">Copying on a Mac</h4>
         		<div class="example">
         			pbcopy < ~/.ssh/id_rsa.pub
         		</div>

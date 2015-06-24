@@ -24,11 +24,11 @@ body #main {
 }
 /* line 25, ../sass/screen.scss */
 body #main h4 {
-  color: #a9a9a9;
+  color: #4d4d4d;
 }
 /* line 29, ../sass/screen.scss */
 body #main .note {
-  color: gray;
+  color: #333333;
   font-style: italic;
 }
 /* line 33, ../sass/screen.scss */
