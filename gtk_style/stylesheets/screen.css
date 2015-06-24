@@ -23,11 +23,15 @@ body #main {
   line-height: 1.5;
 }
 /* line 25, ../sass/screen.scss */
+body #main h4 {
+  color: gray;
+}
+/* line 29, ../sass/screen.scss */
 body #main .note {
   color: gray;
   font-style: italic;
 }
-/* line 29, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 body #main .example {
   border-radius: 1em;
   font-size: 80%;

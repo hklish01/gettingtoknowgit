@@ -51,14 +51,14 @@ You may receive a security warning about the software being from an unknown publ
 
 <li>Next, Select your Start menu Folder.  Choose Next to use the default.</li>
 <li>Next you need to choose how you would like to use Git from the command line.  Choose the second option "Run git from the Windows Command Prompt".  This will allow you to use Git Bash and the Standard Windows prompt.  Do not choose the third option as choosing this option may change settings on your machine that may affect other installed programs.</li>
-<li>	Next, you'll need to choose an option for how Git should treat line endings in text files.  If you're planning on sharing your project with others who may be using a different operating system, choose Checkout Windows-style, commit Unix-style line endings</li>.
+<li>	Next, you'll need to choose an option for how Git should treat line endings in text files.  If you're planning on sharing your project with others who may be using a different operating system, choose Checkout Windows-style, commit Unix-style line endings.</li>
  
 
 <li>Choose Next to start the installation.</li>
 <li>Click Finish to exit the installer.</li>
 </ol>
 
-<h3>You can access Git bash or the Git GUI in a couple of ways:</h3>
+<h4>You can access Git bash or the Git GUI in a couple of ways:</h4>
 <ol>
 <li>Open the Start menu, you'll find a new Git folder with both Git gui and Git Bash icon
 <li>Using the Windows Explorer context menu
@@ -84,9 +84,9 @@ You may receive a security warning about the software being from an unknown publ
         <p>You're ready to start working with git on your computer! One last thing, though - you'll want to set up a SSH key on your computer and add that to your GitHub account. That way you can push and pull projects between your computer and GitHub with ease.</p>
 
     <h3 id="other">Install Git on Other Platforms</h3>
-    <p>We're impressed! Try <a href="https://git-scm.com/download/">git-scm/downloads</a> and follow instructions from there.</p>    
+    <p>So you're not using Windows or Mac? We're impressed! Try <a href="https://git-scm.com/download/">git-scm/downloads</a> for your OS and follow instructions from there.</p>    
 
-        <h3 id="key">Set up an SSH key to authenticate with GitHub</h3>
+        <h2 id="key">Set up an SSH key to authenticate with GitHub</h3>
         <p>If you run the following command, it will create a key on your computer <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the copying step</span></p>
         	<div class="example">
         		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -103,7 +103,7 @@ You may receive a security warning about the software being from an unknown publ
 			</div> 
 
            <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
-           <h3>Paste your key into your GitHub settings</h3>
+           <h4>Paste your key into your GitHub settings</h4>
            <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
           
          <p class="note">Is this step not working well for you? You can another way to authenticate: See <a href="https://help.github.com/articles/caching-your-github-password-in-git/">GitHub instructions for authenticating through https and a credential tool</a>.</p>
