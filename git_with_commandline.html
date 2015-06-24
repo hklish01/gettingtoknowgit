@@ -15,8 +15,8 @@
 			<ol>
 				<li>Install Git</li>
 				<li>Configure some basic settings</li>
-				<li>Set up a key or creditential to authenticate with GitHub</li>
-				<li>Practice with Git and GitHub</li>
+				<li><a href="key">Set up a key or creditential to authenticate with GitHub</a></li>
+				<li><a href="practice">Practice with Git and GitHub</a></li>
 			</ol>
 		<h2 id="install">Install Git</h2>
 		<ul>
@@ -24,6 +24,8 @@
 			<li><a href="#mac">Install on a Mac</li>
 			<li><a href="#other">Install on other platforms</a>
         </ul>
+        <h3 id="pc">Install Git on a PC</h3>
+        <p>You'll use gitbash</p>
 
         <h3 id="mac">Install Git on a Mac</h3>
         <p>There's a chance git is already installed on your Mac! Open up a terminal window and run "git". If you get a long list of commands, you're probably ready to go. If the terminal says something about not knowing what you're talking about, you'll have to install it:</p>
@@ -36,7 +38,8 @@
         	git config --global user.email "your email address"
         </div>
         <p>You're ready to start working with git on your computer! One last thing, though - you'll want to set up a SSH key on your computer and add that to your GitHub account. That way you can push and pull projects between your computer and GitHub with ease.</p>
-        <h3>Set up an SSH key to authenticate with GitHub</h3>
+
+        <h3 id="key">Set up an SSH key to authenticate with GitHub</h3>
         <p>If you run the following command, it will create a key on your computer <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the copying step</span></p>
         	<div class="example">
         		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -52,7 +55,9 @@
 			  clip < ~/.ssh/id_rsa.pub
 			</div> 
            <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
-            
+           <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
+          
+
 		</div>	
 
 
