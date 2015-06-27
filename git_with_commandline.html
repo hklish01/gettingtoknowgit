@@ -72,7 +72,7 @@ You may receive a security warning about the software being from an unknown publ
 
 
         <h3 id="mac">Install Git on a Mac</h3>
-        <p>There's a chance git is already installed on your Mac! Open up a terminal window and run "git". If you get a long list of commands, you're probably ready to go. If the terminal says something about not knowing what you're talking about, you'll have to install it:</p>
+        <p>There's a chance git is already installed on your Mac. Open up a terminal window and run "git". If you get a long list of commands, you're probably ready to go. If the terminal says something about not knowing what you're talking about (you may see something about "no developer tools"), you'll have to install it:</p>
         <p>Go to the <a href="https://git-scm.com/downloads">git-scm downloads page</a> and download the newest version of git. When you open up the downloaded installer, the program will walk you through the set up, which is a quick process.</p>
         <p>You can put in some configurations now - these will be added to every project you start on your computer. Open up your Terminal and run:
         	<div class="example">
@@ -107,18 +107,21 @@ You may receive a security warning about the software being from an unknown publ
            <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
           
          <p class="note">Is this step not working well for you? You can another way to authenticate: See <a href="https://help.github.com/articles/caching-your-github-password-in-git/">GitHub instructions for authenticating through https and a credential tool</a>.</p>
-		</div>	
+
 <h2 id="practice">Practice Git</h2>
 
 <h3>Fork & clone a repository</h3>
 <p>Visit GitHub and fork our repository. You can of course clone whatever repository you'd like, but for the purpose of this practice, go ahead and fork ours.</p>
+<img class="screen_shot" alt="screenshot with fork button pointed to" src="images/ghFork.jpg"/>
 <p>Go to the forked copy of the repository, and grab the code to clone it (if you've set up your SSH key, get the SSH address).</p>
+<img class="screen_shot" alt="screenshot with clone url pointed to" src="images/ghClone.jpg"/>
+
 <p>On your local computer, go to a directory where you don't mind having a practice file. Here you can put in the following command, making sure to change the name of the URL to make it yours:
   <div class="example">
-    git clone gitaddress.
+    git clone git@github.com:<span class="note">yourgithubusername</span>/gettingtoknowgit.git
   </div>
  <p>Make a change to a file... To see what has changed in your repository, run  
 <p>Come class time, we'll set you up with an exercise. If you're itching to get started, have a look at some <a href="resources.html">git resources</a>.</p>
-
+    </div>  
 </body>
 </html>		
