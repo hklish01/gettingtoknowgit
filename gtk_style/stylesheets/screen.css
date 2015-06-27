@@ -16,26 +16,28 @@ body #nav {
 }
 /* line 18, ../sass/screen.scss */
 body #header {
-  padding: 0 0 1em 0;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid gray;
 }
-/* line 22, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
 body #main {
+  margin-top: 0.25em;
   line-height: 1.5;
 }
-/* line 25, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 body #main h4 {
   color: #4d4d4d;
 }
-/* line 28, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 body #main img {
   max-width: 30%;
 }
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 body #main .note {
   color: #333333;
   font-style: italic;
 }
-/* line 36, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 body #main .example {
   border-radius: 1em;
   font-size: 80%;
