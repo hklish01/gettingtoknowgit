@@ -16,10 +16,12 @@ body{
   }
 
   #header{
-  	padding: 0 0 1em 0;
+  	padding-bottom:0.25em;
+        border-bottom: 1px solid gray;
   }
  
   #main{
+    margin-top: 0.25em;
   	line-height: 1.5;
 
   	h4{
