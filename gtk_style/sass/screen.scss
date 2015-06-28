@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+@import "compass/css3";
 
 body{
 	width: 80%;
@@ -27,8 +27,9 @@ body{
   	h4{
   		color: #4d4d4d;
   	}
-    img{
+    .screen_shot{
       max-width: 30%;
+      border: 1px solid gray;
     }
 
   	.note{

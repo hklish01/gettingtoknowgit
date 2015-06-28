@@ -29,15 +29,16 @@ body #main h4 {
   color: #4d4d4d;
 }
 /* line 30, ../sass/screen.scss */
-body #main img {
+body #main .screen_shot {
   max-width: 30%;
+  border: 1px solid gray;
 }
-/* line 34, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 body #main .note {
   color: #333333;
   font-style: italic;
 }
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 body #main .example {
   border-radius: 1em;
   font-size: 80%;
