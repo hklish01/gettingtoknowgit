@@ -1,0 +1,158 @@
+<html>
+<title>Getting to Know Git: CLI</title>
+
+<head>
+	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="gtk_stlye/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+      -->
+	</head>
+	<body>
+		<div id="nav">< <a href="index.html">Back to Getting to Know Git for ALA: Home</a></div>
+		<h1 id="header">Using Git with the Command-line</h1>
+		<div id="main">
+			<ol>
+				<li>Install Git</li>
+				<li><a href="#key">Set up a key or creditential to authenticate with GitHub</a></li>
+				<li><a href="#practice">Practice with Git and GitHub</a></li>
+			</ol>
+
+		<h2 id="install">Install Git</h2>
+		<ul>
+			<li><a href="#pc">Install on Windows</a></li>
+			<li><a href="#mac">Install on a Mac</li>
+			<li><a href="#other">Install on other platforms</a>
+        </ul>
+        <h3 id="pc">Install Git on Windows</h3>
+        <p class="note">Please note:  You may need administrator's rights to install the Git software.  If you do not have Administrator's rights, please contact your computer support team.</p>
+
+<ol>
+<li>Navigate to <a href="http://git-scm.com/">http://git-scm.com/</a></li>
+<li>The webpage will auto-detect what operating system you are using on your machine and provide you with the download for that OS.  Look for the computer screen on the right-hand side of the page.  Click on Downloads for Windows.  Your computer should automatically launch an explorer window and ask you where to save the program on your computer.</li>
+
+<li>On your computer, navigate to where you want to save the Git program .exe file and double-click on the file.  This should launch the installer.<br/>
+You may receive a security warning about the software being from an unknown publisher.  You can safely ignore this message. Click the Run button to continue or cancel to exit out of the installation.</span></li>
+
+
+<li>The Welcome to the Git Setup Window window will appear.  Begin installation by clicking Next.</li>
+ 
+
+<li>Click Next to accept the terms of the license.</li>
+<li>Next, choose where Git will be installed.  Click Next to choose the default location provided unless you know you need to install the software somewhere else on your machine.</li>
+<li>Next, select the components you want installed along with the Git software.  There are already some default options checked.  Other options that you might want to check include:
+<ul>
+<li>Windows Explorer integration, including Git Bash Here and Git GUI Here.  This component will allow you to use the Windows Explorer context menu to access git Bash and Git Gui.</li>
+<li>All other components are optional.</li>
+</ul>
+</li>
+
+ 
+
+<li>Next, Select your Start menu Folder.  Choose Next to use the default.</li>
+<li>Next you need to choose how you would like to use Git from the command line.  Choose the second option "Run git from the Windows Command Prompt".  This will allow you to use Git Bash and the Standard Windows prompt.  Do not choose the third option as choosing this option may change settings on your machine that may affect other installed programs.</li>
+<li>	Next, you'll need to choose an option for how Git should treat line endings in text files.  If you're planning on sharing your project with others who may be using a different operating system, choose Checkout Windows-style, commit Unix-style line endings.</li>
+ 
+
+<li>Choose Next to start the installation.</li>
+<li>Click Finish to exit the installer.</li>
+</ol>
+
+<h4>You can access Git bash or the Git GUI in a couple of ways:</h4>
+<ol>
+<li>Open the Start menu, you'll find a new Git folder with both Git gui and Git Bash icon
+<li>Using the Windows Explorer context menu
+<ul>
+<li>Navigate to a folder on your machine</li>
+<li>Right click inside the folder.  You'll notice two new options in your context menu: Git Bash and Git Gui</li>
+</ul>
+</ol>
+
+<p>OK, Windows user, you're almost done. Follow the steps for <a href="#key">authenticating with GitHub</a>, and then you'll be ready to practice.</p>
+
+
+        <h3 id="mac">Install Git on a Mac</h3>
+        <p>There's a chance Git is already installed on your Mac. Open up a terminal window and run "git". If you get a long list of commands, you're probably ready to go. If the terminal says something about not knowing what you're talking about (you may see something about "no developer tools"), you'll have to install it:</p>
+        <p>Go to the <a href="https://git-scm.com/downloads">git-scm downloads page</a> and download the newest version of Git. When you open up the downloaded installer, the program will walk you through the set up, which is a quick process.</p>
+        <p>You can put in some configurations now - these will be added to every project you start on your computer. Open up your Terminal and run:
+        	<div class="example">
+        	git config --global user.name "your name"
+        </div>
+        <div class="example">
+        	git config --global user.email "your email address"
+        </div>
+        <p>You're ready to start working with Git on your computer! One last thing, though - you'll want to <a href="#key">set up a SSH key</a> on your computer and add that to your GitHub account. That way you can push and pull projects between your computer and GitHub with ease.</p>
+
+    <h3 id="other">Install Git on Other Platforms</h3>
+    <p>So you're not using Windows or Mac? We're impressed! Try <a href="https://git-scm.com/download/">git-scm/downloads</a> for your OS and follow instructions from there.</p>    
+
+        <h2 id="key">Set up an SSH key to authenticate with GitHub</h3>
+        <p>If you run the following command, it will create a key on your computer. <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the <a href="#copy">copying step</a></span>.</p>
+        	<div class="example">
+        		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+        	</div>
+        	<p>Click enter to accept the defaults. If you choose to use a passphrase, keep it short! You should see a statement about your public information and key being saved.</p>
+        	<p>The next step is to copy this information so you can paste it into your GitHub account settings. Because of the nature of the key, you'll probably want to use a special command to copy the key (as opposed to opening up the document in a text editor and copying it from there).
+        		<h4 id="copy">Copying on a Mac</h4>
+        		<div class="example">
+        			pbcopy < ~/.ssh/id_rsa.pub
+        		</div>
+        	<h4>Copying on a PC</h4>
+        	<div class="example">
+			  clip < ~/.ssh/id_rsa.pub
+			</div> 
+
+           <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
+           <h4>Paste your key into your GitHub settings</h4>
+           <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
+          
+         <p class="note">Is this step not working well for you? You can try another way to authenticate: See <a href="https://help.github.com/articles/caching-your-github-password-in-git/">GitHub instructions for authenticating through https and a credential tool</a>.</p>
+
+<h2 id="practice">Practice Git</h2>
+
+<h3>Fork & clone a repository</h3>
+<p>Visit GitHub and fork our repository at <a href="https://github.com/hklish01/gettingtoknowgit">https://github.com/hklish01/gettingtoknowgit</a>. <span class="note">You can of course clone whatever repository you'd like, but for the purpose of this practice, go ahead and fork ours.</span></p>
+<img class="screen_shot" alt="screenshot with fork button pointed to" src="images/ghFork.jpg"/>
+<p>Go to the forked copy of the repository, and grab the code to clone it (if you've set up your SSH key, get the SSH address).</p>
+<img class="screen_shot" alt="screenshot with clone url pointed to" src="images/ghClone.jpg"/>
+
+<p>On your local computer, go to a directory where you don't mind having a practice file. If you're on a PC, do this within the Git Bash application.
+<div class="example">Mkdir new_folder</div>
+Move into that folder:
+<div class="example">cd new_folder</div>
+ Here you can put in the following command, making sure to change the name of the URL to make it yours:
+  <div class="example">
+    git clone git@github.com:<span class="note">yourgithubusername</span>/gettingtoknowgit.git
+  </div>
+  <div>Git will put the project into a new folder called gettingtoknowgit. You can also have Git call it a different name by saying git clone <span class="note">http://thegitrepoaddress different_folder_name</span>.
+<h3>Make a change to your repository</h3>
+ <p>Make a change to a file - Make any of the proposed additions below:
+<ul>
+<li>Add information about banned books to the banned_book.txt file.</li>
+<li>Add a banned book to this same file.</li>
+<li>Add a library name and link to the libraries_info.txt file</li>
+<li>Add a file with a different type of information about banned books (perhaps a list of banned book events?)
+<li>Add and commit your changes, then push them back to your repository on GitHub. Issue a pull request to the original repository. </li>
+</ul>
+<h3>Commit your changes</h3>
+Once you've made a change, run <strong>git status</strong> to see what's changed in your repository.
+To commit your changes - remember that it's a two step process:
+<ol>
+  <li>Stage the files by <strong>git add .</strong> <span class="note"> The dot says take everything that's changed. You have to be at the root of your directory to see all the changes you've made. Git only sees what's in the current directory.</span></li>
+  <li>Commit the files by <strong>git commit -m "<em>note about your change</em>"</strong>. <span class="note">Remember to leave a note about the changes</note>
+ </ol> 
+ <p>Run git status again to make sure you committed all the files you want. Run <strong>git log</strong> to see a history of commits. Notice that this contains commits from before you forked the project.</p>
+<h3>Push your updated repository up to GitHub</h3>
+ <p>Know push to your github repository. Just for the sake of knowing you can, take a look at the address you'll be pushing to:
+ <div class="example">
+ git remote -v
+ </div>
+ <p>You should see the Git address for your repository. You can push to multiple locations. The default one is called "origin". So to push your repository back up to your GitHub account:
+ <div class="example">
+git push master origin
+ </div>  
+<h3>What else?</h3>
+<p>You now know some basics of working with Git! It'll be easier to learn from here. You may want to practice with branches and merging. See our <a href="resources.html">resources page</a> for further tutorials and help.</p>
+    </div>  
+</body>
+</html>		
