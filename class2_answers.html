@@ -1,0 +1,51 @@
+<html>
+<title>Getting to Know Git: CLI</title>
+
+<head>
+	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="gtk_stlye/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+      -->
+	</head>
+	<body>
+		<div id="nav">< <a href="index.html">Back to Getting to Know Git for ALA: Home</a></div>
+		<h1 id="header">Practing Git on Your Computer</h1>
+		<div id="main">
+			
+
+
+<h2 id="practice">Practice Git</h2>
+
+<p>First, practice navigating the command line by making a new folder, going into it, and making a new document.</p>
+<p>Note: Words in italics refer to names you should create/fill in yourself.</p>
+
+<div class="example">mkdir <em>new_folder</em></div>
+Move into that folder:
+<div class="example">cd <em>new_folder</em></div>
+ 
+ 
+<h3>Make a change to your repository</h3>
+ <p>Add files to your directory. Create them via the command line for practice.
+ <div class="example">touch <em>new_document</em></div>
+<ul>
+<li>Add information about banned books to the banned_book.txt file.</li>
+<li>Add a banned book to this same file.</li>
+<li>Add a library name and link to the libraries_info.txt file</li>
+<li>Add a file with a different type of information about banned books (perhaps a list of banned book events?)
+<li>Add and commit your changes, then push them back to your repository on GitHub. Issue a pull request to the original repository. </li>
+</ul>
+<h3>Commit your changes</h3>
+Once you've made a change, run <strong>git status</strong> to see what's changed in your repository.
+To commit your changes - remember that it's a two step process:
+<ol>
+  <li>Stage the files by <strong>git add .</strong> <span class="note"> The dot says take everything that's changed. You have to be at the root of your directory to see all the changes you've made. Git only sees what's in the current directory.</span></li>
+  <li>Commit the files by <strong>git commit -m "<em>note about your change</em>"</strong>. <span class="note">Remember to leave a note about the changes</note>
+ </ol> 
+ <p>Run git status again to make sure you committed all the files you want. Run <strong>git log</strong> to see a history of commits. Notice that this contains commits from before you forked the project.</p>
+
+<h3>What else?</h3>
+<p>You now know some basics of working with Git! It'll be easier to learn from here. You may want to practice with branches and merging. See our <a href="resources.html">resources page</a> for further tutorials and help.</p>
+    </div>  
+</body>
+</html>		
