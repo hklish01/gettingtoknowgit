@@ -1,5 +1,5 @@
 <html>
-<title>Getting to Know Git: CLI</title>
+<title>Beginning Git & GitHub: class 2 practice</title>
 
 <head>
 	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -16,36 +16,97 @@
 
 
 <h2 id="practice">Practice Git</h2>
-
-<p>First, practice navigating the command line by making a new folder, going into it, and making a new document.</p>
-<p>Note: Words in italics refer to names you should create/fill in yourself.</p>
-
-<div class="example">mkdir <em>new_folder</em></div>
-Move into that folder:
-<div class="example">cd <em>new_folder</em></div>
- 
- 
-<h3>Make a change to your repository</h3>
- <p>Add files to your directory. Create them via the command line for practice.
- <div class="example">touch <em>new_document</em></div>
-<ul>
-<li>Add information about banned books to the banned_book.txt file.</li>
-<li>Add a banned book to this same file.</li>
-<li>Add a library name and link to the libraries_info.txt file</li>
-<li>Add a file with a different type of information about banned books (perhaps a list of banned book events?)
-<li>Add and commit your changes, then push them back to your repository on GitHub. Issue a pull request to the original repository. </li>
-</ul>
-<h3>Commit your changes</h3>
-Once you've made a change, run <strong>git status</strong> to see what's changed in your repository.
-To commit your changes - remember that it's a two step process:
+<h3>Set up a new repository and practice committing</h3>
 <ol>
-  <li>Stage the files by <strong>git add .</strong> <span class="note"> The dot says take everything that's changed. You have to be at the root of your directory to see all the changes you've made. Git only sees what's in the current directory.</span></li>
-  <li>Commit the files by <strong>git commit -m "<em>note about your change</em>"</strong>. <span class="note">Remember to leave a note about the changes</note>
- </ol> 
- <p>Run git status again to make sure you committed all the files you want. Run <strong>git log</strong> to see a history of commits. Notice that this contains commits from before you forked the project.</p>
+<li> make a new folder</li>
+<div class="example">
+<strong>mkdir</strong> <em>new_folder_name</em>
+</div>
+<li> navigate into the folder</li>
+<div class="example">
+<strong>cd</strong> <em>new_folder_name</em>
+</div>
+<li> initialize a git repository
+<div class="example">
+<strong>git init</strong>
+</div>
+<li> make a new document</li>
+<div class="example">
+<strong>touch</strong> <em>new_document_name</em>
+</div>
+<li> commit the new document</li>
+<div class="example">
+<strong>git add .</strong> <br/>
+<strong>git commit -m "</strong><em>Add new_document_name</em><strong>"</strong>
+</div>
+<li> Add a new document, and/or create a change to the existing document</li>
+<div class="example">
+<strong>touch</strong> <em>newer_document</em><br/>
+OR<br/>
+<strong>vim</strong> <em>new_document</em><strong></strong>
+</div>
+<li> Make a new commit</li>
+<div class="example">
+<strong>git add .</strong> <br/>
+<strong>git commit -m "</strong><em>Make some other change</em><strong>"</strong>
+</div>
+</ol>
 
-<h3>What else?</h3>
-<p>You now know some basics of working with Git! It'll be easier to learn from here. You may want to practice with branches and merging. See our <a href="resources.html">resources page</a> for further tutorials and help.</p>
-    </div>  
+<h3>Undo changes</h3>
+<ol>
+<li>make a change. Don't add or commit it yet, but reset to the previous commit</li>
+<div class="example">
+(make a change via vim or even a program like Word) <br/>
+<strong>git reset HEAD --hard</strong>
+</div>
+<li>check to verify the change is gone</li>
+<div class="example">
+
+<strong>git status</strong>
+</div>
+<li>make another change, and commit it this time.</li>
+<div class="example">
+(make a change via vim or even a program like Word) <br/>
+<strong>git add .</strong><br/>
+<strong>git commit -m "</strong><em>Some short-lasting note here</em><strong>"</strong>
+
+</div>
+<li>reset the project back to the next most recent commit</li>
+<div class="example">
+<strong>git reset HEAD~1 --hard</strong>
+
+</div>
+<li>verify the state of your project (in other words, the file and/or directories you changed) is back to the earlier commit.</li>
+</ol>
+
+
+
+<h2>Advanced .gitignore excersise</h2>
+<p>
+<strong>Challenge:</strong> Create a .gitignore file that ignores images (or a directory of your choice).
+Test that it's working by adding an image (or something to an ignored directory) and then running git status. If it works, git should not notice a change.
+</p>
+
+<strong>Solutions</strong>
+<p>
+Create a file at the root of your git repository. Name it .gitignore. In it, include lines like this:
+<div class="example">
+<strong>*.png</strong><br/>
+<strong>*.jpeg</strong><br/>
+<strong>*.jpg</strong><br/>
+<strong>*.tiff</strong><br/>
+<strong>*.gif</strong><br/>
+<em>(add in other image file types you can think of)</em>
+</div>
+Alternatively, if you're able to have flexibility in organizing the project files, you could create a directory that all images go in - we'll call this file "images" for the purpose of this example, and then add this to your .gitignore:
+<div class="example">
+<strong>/images</strong>
+</div>
+<p>Here are some resources for the times you have to deal with files that you'd like git to ignore but they are already tracked, but you want them out of project history:
+<ul>
+<li>
+<a href="http://stackoverflow.com/questions/7927230/remove-directory-from-remote-repository-after-adding-them-to-gitignore">Remove already committed files you'd like to .gitignore</a></li>
+<li>
+<a href="https://help.github.com/articles/removing-sensitive-data-from-a-repository/">Remove already committed files from a remote repository</a></li>
 </body>
 </html>		
