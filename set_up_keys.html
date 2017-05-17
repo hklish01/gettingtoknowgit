@@ -1,0 +1,45 @@
+<html>
+<title>Beginning Git & GitHub: Place SSH key copy in GitHub</title>
+
+<head>
+	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="gtk_stlye/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+      -->
+	</head>
+	<body>
+		<div id="nav">< <a href="index.html">Back to "Beginning Git & GitHub": Home</a></div>
+		<h1 id="header">Create SSH key & put copy in your GitHub account</h1>
+		<div id="main">
+		
+	
+       You'll need to put an SSH key from your computer on to your GitHub account in order to work with GitHub. 
+       <h2>Step One: Create Your Key</h2>
+        <p>If you run the following command, it will create a key on your computer. <span class="note"> If you think you already have a key, you can run ls -al ~/.ssh to see if it's there - if it is, skip to the <a href="#copy">copying step</a></span>.</p>
+        	<div class="example">
+        		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+        	</div>
+        	<p>Click enter to accept the defaults. If you choose to use a passphrase, keep it short! You should see a statement about your public information and key being saved.</p>
+          <h2>Step One: Copy your key</h2>
+        	<p>The next step is to copy this information so you can paste it into your GitHub account settings. Because of the nature of the key, you'll probably want to use a special command to copy the key (as opposed to opening up the document in a text editor and copying it from there).
+        		<h4 id="copy">Copying on a Mac</h4>
+        		<div class="example">
+        			pbcopy < ~/.ssh/id_rsa.pub
+        		</div>
+        	<h4>Copying on a PC</h4>
+        	<div class="example">
+			  clip < ~/.ssh/id_rsa.pub
+			</div> 
+
+           <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
+           <h4>Paste your key into your GitHub settings</h4>
+           <h3>Step Three: Paste your key into your GitHub account settings</h3>
+           <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
+          
+         <p class="note">Is this step not working well for you? You can try another way to authenticate: See <a href="https://help.github.com/articles/caching-your-github-password-in-git/">GitHub instructions for authenticating through https and a credential tool</a>.</p>
+
+
+    </div>  
+</body>
+</html>		
