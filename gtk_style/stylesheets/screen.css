@@ -23,22 +23,23 @@ body #header {
 body #main {
   margin-top: 0.25em;
   line-height: 1.5;
+  padding-bottom: 4em;
 }
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 body #main h4 {
   color: #4d4d4d;
 }
-/* line 30, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 body #main .screen_shot {
   max-width: 30%;
   border: 1px solid gray;
 }
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 body #main .note {
   color: #333333;
   font-style: italic;
 }
-/* line 39, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 body #main .example {
   border-radius: 1em;
   font-size: 80%;
