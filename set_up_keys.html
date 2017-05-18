@@ -21,7 +21,7 @@
         		ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
         	</div>
         	<p>Click enter to accept the defaults. If you choose to use a passphrase, keep it short! You should see a statement about your public information and key being saved.</p>
-          <h2>Step One: Copy your key</h2>
+          <h2>Step Two: Copy your key</h2>
         	<p>The next step is to copy this information so you can paste it into your GitHub account settings. Because of the nature of the key, you'll probably want to use a special command to copy the key (as opposed to opening up the document in a text editor and copying it from there).
         		<h4 id="copy">Copying on a Mac</h4>
         		<div class="example">
@@ -32,8 +32,12 @@
 			  clip < ~/.ssh/id_rsa.pub
 			</div> 
 
-           <p class="note">If "clip" doesn't work on your PC, try: <strong>cat ~/.ssh/id_rsa.pub</strong></p>
-           <h4>Paste your key into your GitHub settings</h4>
+
+           <p class="note">If "clip" doesn't work on your PC, try: <div class="example"> <strong>cat ~/.ssh/id_rsa.pub</strong></div>
+
+           <p>Essentially, you want the text of this file in your computer's clipboard. If none of the commands above are working, try to open the file with a text editor and select all the characters.</p>
+   
+           
            <h3>Step Three: Paste your key into your GitHub account settings</h3>
            <p>The last step in authenticating with GitHub is to log in to GitHub, go to your settings page (to do this, click on your profile picture and select "Settings from the drop down menu"). Once you're on the settings page, click "SSH Keys" on the left-hand menu, then "Add SSH key".</p>  
           
