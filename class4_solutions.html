@@ -1,0 +1,57 @@
+<html>
+<title>Beginning Git & GitHub: class 4 practice</title>
+
+<head>
+	<link href="gtk_style/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="gtk_stlye/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+      -->
+	</head>
+	<body>
+		<div id="nav">< <a href="index.html">Back to "Beginning Git and GitHub": Home</a></div>
+		<h1 id="header">Branching and Merging: Practice</h1>
+		<div id="main">
+			
+
+<h2 id="practice">Branching and Merging: Practice Solutions</h2>
+
+
+<h3>Dealing with a merge conflict</h3>
+
+
+<h4>Merge the branches</h3>
+<p>In this exercise, I'd like you to merge the change_index branchinto master. Try to do this part on your own - feel free to Google. I will have 'solutions' next week.
+<ul>
+<li>Move to master</li>
+<div class="example">
+git checkout master
+</div>
+<li>Merge change_index into master</li>
+<div class="example">
+git merge change_index
+</div>
+<li>Deal with the merge conflict</li>
+
+<p>
+<ul>
+<li>Open index.html with a text editor. </li>
+<li>Look for the "<<<<<<< HEAD" and "=====" notations: This is git's way of pointing out the exact area(s) where the conflicts are.</li>
+<li>Decide which line you want to take. Erase the other one, as well as all the "<<<..", "===" and branch name notations.</li>
+<li>
+Add & commit this file. 
+<div class="example">
+git add .<br>
+git commit -m "<em>something about merging the change_index branch</em>"
+</div>
+</li>
+</ul>
+</ul>
+
+
+
+</div>
+
+
+</body>
+</html>		
